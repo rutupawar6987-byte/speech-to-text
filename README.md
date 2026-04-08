@@ -1,55 +1,98 @@
-# Speech-to-Text Transcription Script
 
-This is a Python script that transcribes audio files to text using Google's speech recognition API. The script can handle audio files in WAV, MP3, M4A, OGG, or FLAC format.
+✨ GenAI Voice-to-Text Transcription System ✨
+=============================================
 
-## Dependencies
+📄 Project Overview:
+A voice-to-text transcription system powered by **OpenAI Whisper**, converting audio files into text efficiently. Supports multiple audio formats and languages, working offline with local models.
 
-The following libraries are required to run this script:
+🛠️ Features:
+- ✅ Converts speech to text with high accuracy
+- ✅ Supports audio formats: MP3, M4A, WAV, OGG, FLAC
+- ✅ Supports multiple languages and accents
+- ✅ Offline transcription using local Whisper models
+- ✅ Enhanced from a simpler Google Speech Recognition version
 
-- SpeechRecognition
-- Pydub
+⚙️ Dependencies:
+- Python 3.x
+- `openai-whisper`
+- `torch`
+- `pydub`
+- `ffmpeg` (required for non-WAV files)
 
-You can install these libraries using pip:
+💻 Installation:
+```bash
+pip install openai-whisper torch pydub
 
-```pip
-pip install SpeechRecognition pydub
-```
 
-## Usage
+Download FFmpeg: https://ffmpeg.org/download.html
 
-To use the script, simply run `speech_to_text.py` and follow the prompts:
+1.Navigate to the project folder:
 
-```python
-python speech_to_text.py
-```
+    cd path/to/voice-to-text
 
-The script will ask you to enter the path to the input audio file, the path to the output file, and the language code for the audio file.
+2. Run the scripts
+     python genai_spech_to_text.py
 
-## How It Works
+3.Follow the prompts
 
-The script first converts the input audio file to WAV format if necessary using the Pydub library. It then transcribes the audio data to text using the SpeechRecognition library and the Google speech recognition API. Finally, it writes the transcribed text to the output file.
+    Enter the input audio file path
 
-## Why Use This Script?
+    Enter the output text file path
 
-This script can be useful for anyone who needs to transcribe audio files to text, such as researchers, journalists, and content creators. It provides a simple and efficient way to transcribe audio data, with support for multiple audio formats and languages.
+    Enter the language code (e.g., en-US)
 
-## Supported Languages
+4>Transcription is saved in the output file and displayed on screen
 
-Language | Code 
----------|------
-English (US) | en-US 
-English (UK) | en-GB 
-French | fr-FR 
-German | de-DE 
-Spanish | es-ES 
-Italian | it-IT 
-Japanese | ja-JP 
-Korean | ko-KR 
-Mandarin Chinese | zh-CN 
-Russian | ru-RU 
+🌐 Supported Languages (Partial List):
 
-Note that this is not an exhaustive list of supported languages. For a full list of supported languages and their corresponding codes, see the [SpeechRecognition documentation](https://cloud.google.com/speech-to-text/docs/speech-to-text-supported-languages).
+# English (US) – en-US
 
-## License
+# English (UK) – en-GB
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+# French – fr-FR
+
+# German – de-DE
+
+# Spanish – es-ES
+
+# Italian – it-IT
+
+# Japanese – ja-JP
+
+# Korean – ko-KR
+
+# Mandarin Chinese – zh-CN
+
+# Russian – ru-RU
+
+Whisper supports many more languages – see the official Whisper docs
+5.⚡ How It Works:
+
+Loads the audio file using Pydub and converts to WAV if necessary
+
+Loads the OpenAI Whisper model (small/medium/large)
+
+Transcribes audio to text locally
+
+Saves the text to the output file
+
+🎯 Use Cases:
+
+Automatic transcription for interviews, podcasts, lectures
+
+Generating subtitles and captions for videos
+
+Research and content creation
+
+Voice-driven AI applications
+
+🛠️ Skills & Tools:
+Python, PyTorch, OpenAI Whisper, FFmpeg, Pydub
+Generative AI, NLP, Speech Recognition, Audio Processing
+
+📜 License:
+This project is licensed under the MIT License
+
+
+
+
